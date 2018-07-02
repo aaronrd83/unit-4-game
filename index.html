@@ -1,0 +1,124 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h1 class="blue" style="color:#2196F3;"> Crystal Game </h1>
+                <h3 class="blue">by Aaron Davis</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="list-group">
+                        <li>You will be given a random number at the start of the game.</li>
+                        <li>There are four crystals below. By clicking on a crystal you will add 
+                            a specific amount of points to your total score.</li>
+                        <li>You win the game by matching your total score to the random number given. You 
+                            lose the game if your total score goes above the random number.</li>
+                        <li>The value of each crystal is hidden until you click on it.</li>
+                        <li>Each time the game starts, the game will change the values of each crystal</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+<div class="container"> 
+    <div class="row">
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                  <img src="assets/images/Ametrine.jpg" alt="Ametrine">
+                  <div class="Ametrine">
+                    <p>Ametrine</p>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                  <img src="assets/images/turquoise.JPG" alt="Turquoise">
+                  <div class="Peridot">
+                    <p>Peridot</p>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                  <img src="assets/images/Ruby.jpg" alt="Ruby">
+                  <div class="Ruby">
+                    <p>Ruby</p>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="thumbnail">
+                    <img src="assets/images/Topaz.jpg" alt="Topaz">
+                    <div class="Topaz">
+                        <p>Ruby</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div> 
+
+<div class="container">
+    <div class="row">
+            <div class="col-md-4">
+        		<div class="card">
+                    <div class="card-content">
+                    	<div class="card-header-blue">
+                           <h1 class="card-heading">Random Number</h1>
+                       	</div>
+                       	<div class="card-body">
+                     	  <p class="card-p"><h2><span class="randomNum"></span></h2></p>
+                     	</div>
+                    </div>
+                </div>
+           	</div>
+        <div class="col-md-4">
+        	<div class="card">
+                    <div class="card-content">
+                    	<div class="card-header-blue">
+                           <h1 class="card-heading">Your Number</h1>
+                       	</div>
+                       	<div class="card-body">
+                     	  <p class="card-p"><h2><span class="playerNum"></span></h2></p>
+                     	</div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4">
+        	<div class="card">
+                    <div class="card-content">
+                    	<div class="card-header-blue">
+                           <h1 class="card-heading">Score</h1>
+                       	</div>
+                       	<div class="card-body">
+                           <p class="card-p"><h2>Wins: <span class="wins"></span></h2></p>
+                            <p class="card-p"><h2>Losses: <span class="losses"></span></h2></p> 
+                     	</div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
