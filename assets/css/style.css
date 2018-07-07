@@ -3,14 +3,15 @@
     border:1px solid #AAA;
     border-bottom:3px solid #BBB;
     padding:0px;
-    margin-top:4em;
+    margin-top:3em;
     overflow:hidden;
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;   
 }
+
 
 .card {
     background-color:#ffffff;
@@ -22,18 +23,18 @@
     font-family: 'Roboto', sans-serif;
     -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 2em;
 }
 
 .thumbnail {
-    height: 120px;
-    width: 120px;
+    height: 170px;
+    width: 130px;
+    padding: 0%;
 }
 
 .card-header-blue{
     background-color:#2196F3;
     color:#FFFFFF;
-    border-bottom:3px solid #BBB;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: 'Roboto', sans-serif;
     padding:0px;
     margin-top:0px;
@@ -68,4 +69,35 @@
     font-family: 'Roboto', sans-serif;
     -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+li {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif
+}
+
+.img-amethyst, .img-ruby, .img-diamond, .img-sapphire {
+    height: 125px;
+    width: 125px;
+    background: transparent;
+}
+
+.card-p {
+    height: 25px;
+    color: black;
+}
+
+.well {
+    width: 250px;
+    height: 100px;
+}
+
+.list-group {
+    margin-left: 20px;
+    width: 1100px;
 }
