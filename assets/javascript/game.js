@@ -9,38 +9,60 @@ var diamond = 0;
 var sapphire = 0;
 
 
-document.getElementById("wins").innerHTML=win;
-document.getElementById("losses").innerHTML=loss;
+document.getElementById("wins").innerHTML = win;
+document.getElementById("losses").innerHTML = loss;
 
 function startGame() {
 
 
-playerNum = 0;
-randomNum = Math.floor(Math.random() * 100) + 19
-console.log(randomNum)
+    playerNum = 0;
+    randomNum = Math.floor(Math.random() * 100) + 19
+    console.log(randomNum)
 
-$("#randomNum").text(randomNum);
-$("#playerNum").text(playerNum);
+    $("#randomNum").text(randomNum);
+    $("#playerNum").text(playerNum);
 
 
-var rubyNumOptions = [1, 5, 9];
-var amethystNumOptions = [2, 6, 10];
-var diamondNumOptions = [3, 7, 11];
-var sapphireNumOptions = [4, 8, 12];
+    var rubyNumOptions = [1, 5, 9];
+    var amethystNumOptions = [2, 6, 10];
+    var diamondNumOptions = [3, 7, 11];
+    var sapphireNumOptions = [4, 8, 12];
 
-ruby = rubyNumOptions[Math.floor(Math.random() * rubyNumOptions.length)]
-console.log(ruby)
+    ruby = rubyNumOptions[Math.floor(Math.random() * rubyNumOptions.length)]
+    console.log(ruby)
 
-amethyst = amethystNumOptions[Math.floor(Math.random() * amethystNumOptions.length)]
-console.log(amethyst)
+    amethyst = amethystNumOptions[Math.floor(Math.random() * amethystNumOptions.length)]
+    console.log(amethyst)
 
-diamond = diamondNumOptions[Math.floor(Math.random() * diamondNumOptions.length)]
-console.log(diamond)
+    diamond = diamondNumOptions[Math.floor(Math.random() * diamondNumOptions.length)]
+    console.log(diamond)
 
-sapphire = sapphireNumOptions[Math.floor(Math.random() * sapphireNumOptions.length)]
-console.log(sapphire)
+    sapphire = sapphireNumOptions[Math.floor(Math.random() * sapphireNumOptions.length)]
+    console.log(sapphire)
 
 }
+
+
+function gameStat() {
+    if (playerNum === randomNum) {
+        alert("You Win");
+        win++
+        $("#wins").html(win);
+        startGame()
+    }
+
+    else if (playerNum >= randomNum) {
+        alert("You Lose!!");
+        loss++
+        $("#losses").html(loss);
+        startGame()
+    }
+}
+
+
+
+
+
 
 
 $(document).ready(function () {
@@ -49,84 +71,43 @@ $(document).ready(function () {
         $("#playerNum").html(playerNum + ruby);
         playerNum = playerNum + ruby;
         console.log(playerNum)
-        if (playerNum === randomNum) {
-            alert("You Win");
-            $("#wins").html(win++);
-            startGame()
-        }
-    
-        else if (playerNum >= randomNum) {
-            alert("You Lose!!");
-            $("#losses").html(loss++);
-            startGame()
-    
-        }
+        gameStat()
     })
 
     $(".img-amethyst").click(function () {
         $("#playerNum").html(playerNum + amethyst);
         playerNum = playerNum + amethyst;
         console.log(playerNum)
-        if (playerNum === randomNum) {
-            alert("You Win");
-            $("#wins").html(win++);
-            startGame()
-        }
-    
-        else if (playerNum >= randomNum) {
-            alert("You Lose!!");
-            $("#losses").html(loss++);  
-            startGame()
-         }
+        gameStat()
     })
 
     $(".img-diamond").click(function () {
         $("#playerNum").html(playerNum + diamond);
         playerNum = playerNum + diamond;
         console.log(playerNum)
-        if (playerNum === randomNum) {
-            alert("You Win");
-            $("#wins").html(win++);
-            startGame()
-        }
-    
-        else if (playerNum >= randomNum) {
-            alert("You Lose!!");
-            $("#losses").html(loss++);
-            startGame()
-        }
+        gameStat()
     })
 
     $(".img-sapphire").click(function () {
         $("#playerNum").html(playerNum + sapphire);
         playerNum = playerNum + sapphire;
         console.log(playerNum)
-        if (playerNum === randomNum) {
-            alert("You Win");
-            $("#wins").html(win++);
-            startGame()
-        }
-    
-        else if (playerNum >= randomNum) {
-            alert("You Lose!!");
-            $("#losses").html(loss++);
-            startGame()
-        }
+        gameStat()
     })
-    
 
-  /*if (playerNum === randomNum) {
-        alert("You Win");
-    }
 
-    else if (playerNum >= randomNum) {
-        alert("You Lose!!");
-    }*/
-        
+    /*if (playerNum === randomNum) {
+          alert("You Win");
+      }
+  
+      else if (playerNum >= randomNum) {
+          alert("You Lose!!");
+      }*/
+
 
 });
 
-  
+
     //$(".img-amethyst").click(function () {
     //$("#playerNum").text(amethyst);
     // playerNum = Number(playerNum) + Number($(this).val());
